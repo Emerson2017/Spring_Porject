@@ -2,17 +2,22 @@ package com.development.development;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
+
+
+@Controller
 public class DevelopmentController {
+
+	@RequestMapping("/teste")
+	public String home(){
+		return "teste.html";
+	}
 
 	
 	@RequestMapping("/")
-	@ResponseBody
-	String home() {
-		return "Hello World";
+	public String index(){
+		return "index.html";
 	}
+
 }
